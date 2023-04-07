@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "name": "tw",
+  "version": "1.0.0",
+  "description": "site despre ochelari de vedere, de soare, de sport",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ochelari",
+    "Iris",
+    "Vision",
+    "rame"
+  ],
+  "author": "Cirstea Ruxandra-Gabriela",
+  "license": "ISC"
+}

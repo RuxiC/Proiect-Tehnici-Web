@@ -1,0 +1,19 @@
+html{
+    font-size:16px;
+}
+
+body{
+    --spatiere-pagina:30px;
+    --padding-sectiune:10px;
+}
+
+#grid-pagina{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "z-bine_ati_venit z-bine_ati_venit"
+                         "z-fig1 z-program "
+                         "z-fig2 z-intrebari"
+                         "z-oferte z-anunturi"
+                         "z-ochelari_de_vedere z-ochelari_de_vedere"
+                         ;
+}

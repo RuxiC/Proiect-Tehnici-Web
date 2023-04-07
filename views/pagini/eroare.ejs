@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title>Iris Vision - eroare</title>
+        <meta name="description" content="Site-ul nostru de ochelari ofera diferite tipuri de ochelari, precum: de vedre, de soare, de sport, cu optiunea de cumparare online si livrare prin curier.">
+        <meta name="keywords" content="ochelari, iris, vision, lentile, rame, progresivi">
+        <link rel="stylesheet" type="text/css" href="/resurse/css/eroare.css"
+        <%- include("../fragmente/head.ejs");  %> 
+
+
+    </head>
+    <body>
+        
+    <%- include("../fragmente/header.ejs");  %> 
+
+    <main>
+        <div id="err-coloane">
+			<div id="err-imag">
+				<img src="<%- locals.imagine %>" /> <!--etapa 4 ex 12-->
+			</div>
+			<section>
+				<h2><%- locals.titlu %></h2>
+				<p><%- locals.text %></p>
+			</section>
+		</div>
+    </main>
+    
+    <%- include("../fragmente/footer.ejs");  %> 
+
+
+    </body>
+</html>

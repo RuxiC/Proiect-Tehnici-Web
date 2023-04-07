@@ -1,0 +1,388 @@
+.c1{
+    background-color: var(--culoare-buton-deschisa);
+    text-align: center;
+    border-radius: 40%;
+}
+
+.c2{
+    background-color: var(--culoare-buton-deschisa);
+}
+
+html{
+    font-size:18px;
+    transition: font-size 0.3s linear; /*4-2*/
+    font-family: Raleway; /* task-font*/
+}
+
+
+body{
+    --culoare-fundal:#E9DFE1;
+    --culoare-margini:#0B3E80;
+    --culoare-albastru-deschis:#5ACDD1;
+    --culoare-tabel:#0C7EF0;
+    --culoare-buton-deschisa: #DE1AE8;
+    --culoare: #00D7EA;
+    --culoare-text:black;
+    --spatiere-pagina:50px;
+    --padding-sectiune:15px;
+}
+
+body.dark{
+    --culoare-fundal:black;
+    --culoare-text:white;
+}
+
+
+body{
+    background-color: var(--culoare-fundal);
+    color:var(--culoare-text);
+    padding-left:var(--spatiere-pagina);
+    padding-right:var(--spatiere-pagina);
+    min-width:450px;
+    margin:0;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+/*4*/
+#grid-pagina > *{
+    border: 3px solid var(--culoare-margini);
+    padding:var(--padding-sectiune);
+}
+
+#grid-pagina > section{
+    border: 3px var(--culoare-margini) solid;
+}
+
+#grid-pagina{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "z-bine_ati_venit z-bine_ati_venit z-bine_ati_venit"
+                         "z-fig1 z-oferte z-intrebari"
+                         "z-fig2 z-oferte z-intrebari"
+                         "z-fig2 z-program z-anunturi"
+                         "z-ochelari_de_vedere z-ochelari_de_vedere z-ochelari_de_vedere "
+                         ;
+    gap: 20px 10px; 
+}
+
+#bine_ati_venit{
+    grid-area: z-bine_ati_venit;
+}
+#oferte{
+    grid-area: z-oferte;
+}
+#intrebari{
+    grid-area: z-intrebari;
+}
+ 
+#program{
+    grid-area: z-program;
+}
+ 
+#fig1{
+    grid-area: z-fig1;
+}
+#fig2{
+    grid-area: z-fig2;
+}
+ 
+#anunturi{
+    grid-area: z-anunturi;
+}
+#ochelari_de_vedere{
+    grid-area: z-ochelari_de_vedere;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+}
+main{
+    margin-top: 100px;
+}
+
+/*5*/
+.buton{
+    text-decoration: solid;
+    text-decoration-color: var(--culoare-margini);
+    display: block;
+    border-right-style: double;
+    border-top-style: double;
+    border-bottom-style: double;
+    border-color: var(--culoare-margini);
+    border-bottom-right-radius: 10%;
+    border-top-right-radius: 10%;
+    background: 2px var(--culoare-albastru-deschis);
+    padding: 5px;
+    width: 110px;
+    height: 40px;
+    text-align: center;
+    box-sizing: content-box;
+    transition: 0.5s linear;
+    
+}
+
+.video{
+    border: 4px solid var(--culoare-margini) ;
+    border-style: inset;
+}
+.container-iframe{
+    display: flex; 
+    flex-direction: row;
+}
+
+.taburi-iframe{
+    display: flex;
+    flex-direction: column;
+}
+
+.buton:hover{
+    background-color: var(--culoare-albastru-deschis);
+    border-color: var(--culoare-margini);
+    width:130px;
+    background-color:#B8E6E8;
+    border: 2px solid #B8E6E8 double;
+
+}
+
+/*6*/
+#tab-orar{
+    overflow: hidden;
+    caption-side: bottom;
+    width:100%;
+    border: 5px solid var(--culoare-margini);
+    border-collapse: collapse;
+}
+
+#tab-orar tr:nth-child(odd){
+    background-color: var(--culoare-albastru-deschis);
+}
+
+#tab-orar tr:nth-child(even){
+    background-color: var(--culoare-tabel);
+}
+
+#tab-orar td{
+    padding: 2px;
+    text-align: center;
+}
+
+#tab-orar th{
+    padding: 2px;
+    text-align: center;
+    background-color: var(--culoare-fundal);
+}
+
+#tab-orar tr{
+    transition: 0.5s linear;
+}
+
+#tab-orar tr:hover{
+    background-color: rgb(251, 250, 205);
+    border: 2px solid rgb(251, 250, 205);
+    transition: 1s linear;
+}
+
+/*7*/
+.mergi-sus {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+  
+.mergi-sus:hover {
+    opacity: 1;
+}
+  
+.mergi-sus .triunghi {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 14px solid var(--culoare-margini);
+    transition: transform 0.2s ease-in-out;
+    margin-right: 3px;
+}
+  
+.mergi-sus .triunghi:hover {
+    transform: translateY(-6px);
+    border-bottom-color: var(--culoare-albastru-deschis);
+}
+  
+.mergi-sus .paranteza {
+    font-size: 30px;
+    line-height: 15px;
+    margin: 0 4px;
+}
+
+@media print{
+
+    #grid-pagina div:nth-child(5) {
+
+        page-break-before: always;
+    }
+
+    #banner{
+        overflow: visible;
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        border: 2px dotted black;
+        top: 0;
+        width: 80%;
+        margin-bottom: 70px;
+    }
+    img{
+        display: none;
+    }
+    iframe{
+        display: none;
+    }
+    figcaption{
+        display: none;
+    }
+    .buton{
+        display:none;
+    }
+    .mergi-sus{
+        display: none;
+    }
+    #grid-pagina > *{
+        border: none;
+    }
+
+    #grid-pagina > section{
+        border:none;
+    }
+
+    section, div{
+        border:none;
+    }
+    #bine_ati_venit{
+        border:none;
+    }
+    header{
+        text-align: center;
+        text-decoration: underline;
+        page-break-after: always;
+        padding-top: 20px;
+        font-size: 2.5em;
+    }
+    nav{
+        display: none;
+    }
+    a{
+        text-decoration: none;
+        color:black;
+    }
+    footer{
+        page-break-before: always;
+    }
+    .watermark {
+        display: block;
+        position: fixed;
+        /*apare pe toate paginile*/
+        bottom: 5px;
+        color: rgba(0, 0, 0);
+        right: 5px;
+    }
+
+    .watermark::after {
+
+        opacity: 0.65;
+        padding: 5px;
+        height: 2cm;
+        width: 100px;
+        line-height: 1cm;
+        display: block;
+        background: white;
+        outline: 4px solid black;
+        border:2px solid black;
+        content: "Cîrstea Ruxandra";
+    }
+
+
+}
+
+@page {
+    size: A4 portrait;
+    margin-bottom:2cm;
+	margin-top:2cm;
+	counter-increment: page;
+}
+
+@page: left {
+
+    margin-left: 2.5cm;
+    margin-right: 0.5cm;
+}
+
+@page: right {
+
+    margin-right: 2.5cm;
+    margin-left: 0.5cm;
+}
+
+
+/* etapa 4 - stilizare linkuri*/
+
+a:visited{
+    color: var(--culoare-margini);
+    
+}
+
+a.link:active{
+    border: 2px solid var(--culoare-margini);
+}
+
+/* linkurile externe sunt http*/
+main a[href ^="http"]::before{
+    content: "\2BB3";
+    font-size: 1.5em;
+}
+main a[href ^="http"]:hover::before{
+    color: var(--culoare-buton-deschisa);
+    transition: color 0.35s linear;
+}
+
+a.link{
+    background-image: radial-gradient(var(--culoare) 0%, var(--culoare) 40%, transparent 80%, transparent 100%);
+    background-position: center;
+    background-size: 0%;
+    background-repeat: no-repeat;
+    transition: all 1.5s ease-out;
+}
+  
+a:hover {
+    background-size: 100%;
+    background-position: center;
+}
+
+/*etapa 4 -video vtt */
+::cue{
+    color: var(--culoare-margini);
+    background-color: white;
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+video{
+    display: block;
+    width: 100%;
+    min-width: 200px;
+    max-width: 400px;
+    min-height: auto;
+    max-height: none;
+}

@@ -1,0 +1,13 @@
+body{
+    --inaltime-meniu: 45px;
+    --latime-buton: 200px;
+}
+
+#acasa-meniu{
+    display: block;
+}
+
+#acasa{
+    display:none;
+}
+
