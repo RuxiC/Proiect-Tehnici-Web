@@ -1,0 +1,94 @@
+body{
+  --culoare-fundal:#E9DFE1;
+  --culoare-margini:#0B3E80;
+  --culoare-albastru-deschis:#5ACDD1;
+  --culoare-tabel:#0C7EF0;
+  --culoare-buton-deschisa: #DE1AE8;
+  --culoare: #00D7EA;
+  --culoare-text:black;
+  --spatiere-pagina:50px;
+  --padding-sectiune:15px;
+}
+
+#galerie-statica{
+  padding-left:var(--padding-intern);
+  padding-right:var(--padding-intern);
+}
+
+#grid-galerie {
+ display:grid;
+ grid-template-columns: repeat(4,1fr);
+ grid-template-areas:
+    ". . . . "
+    ". z-gol z-gol ."
+    ". . . .";
+ grid-row-gap:0.5em;
+ grid-column-gap:0.5em;
+ counter-reset: nrimag 0;  /* nrimag=3 */
+}
+#grid-galerie img{
+  width: 100%;
+}
+
+#gol {
+  grid-area: z-gol;
+}
+
+#grid-galerie figcaption{
+  text-align:center;
+  counter-increment: nrimag 1; /* nrimag+=2 */
+}
+
+#grid-galerie figcaption::before{
+  content: counter(nrimag, lower-alpha) ") ";
+}
+
+
+@media screen and (max-width:1000px) {
+  #grid-galerie {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      ". ."
+      ". ."
+      ". ."
+      ". ."
+      ". .";
+  }
+
+#gol {
+  display: none;
+}
+}
+
+#grid-galerie figure {
+  position: relative;
+  overflow: hidden;
+  transition: all 1.25s ease-in-out;
+  }
+  
+  #grid-galerie figure:hover {
+  transform: translateY(-15%) scale(1.3);
+  border-radius: 7%;
+  }
+  
+  #grid-galerie figure:hover figcaption {
+  background-color: var(--culoare-margini);
+  color: var(--culoare-buton-deschisa);
+  }
+  
+  #grid-galerie figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 1.25s ease-in-out;
+  }
+  
+  #grid-galerie figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  transition: all 1.25s ease-in-out;
+  }

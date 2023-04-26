@@ -1,0 +1,66 @@
+{
+	"cale_galerie":"resurse/imagini/galerie",
+	"imagini": [
+		{
+			"fisier":"ochelari_barbati_carrera.jpg",
+			"titlu":"Ochelari bărbați",
+			"descriere":"Ochelari bărbați Carrera",
+			"timp":"09:00-22:00"
+		},
+		{
+			"fisier":"ochelari_barbati_fossil.jpg",
+			"titlu":"Ochelari bărbați",
+			"descriere":"Ochelari bărbați Fossil",
+			"timp":"09:00-22:00"
+			
+		},
+		{
+			"fisier":"ochelari_femei_tommy.jpg",
+			"titlu":"Ochelari femei",
+			"descriere":"Ochelari femei Tommy Hilfiger",
+			"timp":"09:00-22:00"
+		},
+		{
+			"fisier":"ochelari_femei_carolina.jpg",
+			"titlu":"Ochelari femei",
+			"descriere":"Ochelari femei Carolina Herrera",
+			"timp":"09:00-22:00"
+		},
+		{
+			"fisier":"ochelari_soare_barbati_dolce_gabbana.jpg",
+			"titlu":"Ochelari bărbați",
+			"descriere":"Ochelari bărbați de soare Dolce Gabana",
+			"timp":"09:00-22:00"
+		},
+		{
+			"fisier":"ochelari_soare_barbati_guess.jpg",
+			"titlu":"Ochelari bărbați",
+			"descriere":"Ochelari bărbați de soare Guess",
+			"timp":"09:00-22:00"
+		},
+		{
+			"fisier":"ochelari_soare_dama_dolce_gabbana.jpg",
+			"titlu":"Ochelari femei",
+			"descriere":"Ochelari femei de soare Dolce Gabbana",
+			"timp":"09:00-22:00"
+		},
+		{
+			"fisier":"ochelari_soare_dama_guess.jpg",
+			"titlu":"Ochelari femei",
+			"descriere":"Ochelari femei de soare Guess",
+			"timp":"09:00-22:00"
+		},
+		{
+			"fisier":"ochelari_ciclism.jpg",
+			"titlu":"Ochelari sport",
+			"descriere":"Ochelari ciclism",
+			"timp":"09:00-22:00"
+		},
+		{
+			"fisier":"ochelari_ski.jpg",
+			"titlu":"Ochelari sport",
+			"descriere":"Ochelari ski",
+			"timp":"09:00-12:00"
+		}
+	]
+}

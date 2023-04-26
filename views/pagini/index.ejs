@@ -44,10 +44,10 @@
                             <track default src="/resurse/video/subtitles ro.vtt" kind="captions" srclang="ro" label="romana"/>
                             <track  src="/resurse/video/subtitles en.vtt" kind="captions" srclang="en" label="engleza"/>
                     </video>
-                    <button class="btn btn-primary">ceva</button>
+                  <!--  <button class="btn btn-primary">ceva</button> -->
             </section>
 
-            <!--6 si 7-->
+            <!-- 6 si 7-->
             <section id="oferte">
                 <h2>Oferte</h2>
                         <article>
@@ -174,10 +174,10 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed suscipit mauris. Proin commodo, arcu in mollis ullamcorper, 
                     tortor elit pulvinar dui, at vehicula mauris felis laoreet mauris. Nunc vulputate risus ex.</p>
             </section>
-            <section id="ochelari_de_vedere">
-                <h2>Ochelari de vedere</h2>
+            <section id="produse">
+                <h2>Produse</h2>
                 <p>
-                    În videoclipurile de mai jos puteți vedea câteva modele de rame de ochelari.
+                    În videoclipurile de mai jos puteți vedea câteva dintre produsele noastre: ochelari de vedere, de soare, de sport.
                 </p>
                 <div class="container-iframe">
                      <!--11c-->
@@ -193,6 +193,25 @@
                     alegerea modelului de rame în funcție de caracteristicile feței dumneavoastră.</p>
             </section>
         </div>
+
+        <section id="galerie-statica">
+            <h2>Galerie</h2> 
+            <div id="grid-galerie">
+                <% for (let imag of locals.imagini) { 
+                   
+                %>
+                <figure>
+                    <picture>
+                        <source srcset="<%- imag.fisier_mediu %>" media="(max-width:1000px)" />
+                        <img src="<%- imag.fisier %>" alt="imagine">
+                    </picture>
+                    <figcaption><%- imag.descriere %></figcaption>
+                </figure>
+                <div id ="gol"></div>
+               
+                <% }  %>
+            </div>
+        </section>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed suscipit mauris. Proin commodo, arcu in mollis ullamcorper, 
             tortor elit pulvinar dui, at vehicula mauris felis laoreet mauris. Nunc vulputate risus ex.</p>
