@@ -6,6 +6,8 @@
 
 .c2{
     background-color: var(--culoare-buton-deschisa);
+    text-align: center;
+    border-radius: 40%;
 }
 
 html{
@@ -23,8 +25,9 @@ body{
     --culoare-buton-deschisa: #DE1AE8;
     --culoare: #00D7EA;
     --culoare-text:black;
+    --mov-deschis:#EA80E0;
     --spatiere-pagina:50px;
-    --padding-sectiune:15px;
+    --padding-sectiune:50px;
 }
 
 body.dark{
@@ -53,10 +56,15 @@ h2{
 #grid-pagina > *{
     border: 3px solid var(--culoare-margini);
     padding:var(--padding-sectiune);
+    border-radius: 4%;
+    background-color: var(--mov-deschis);
 }
 
 #grid-pagina > section{
     border: 3px var(--culoare-margini) solid;
+    border-radius: 4%;
+    background-color: var(--mov-deschis);
+    padding:var(--padding-sectiune);
 }
 
 #grid-pagina{
@@ -242,6 +250,10 @@ main{
         width: 80%;
         margin-bottom: 70px;
     }
+    body{
+        background-color: white;
+        display: block;
+    }
     img{
         display: none;
     }
@@ -259,12 +271,18 @@ main{
     }
     #grid-pagina > *{
         border: none;
+        display:block;
+        background-color: white;
     }
-
+   
     #grid-pagina > section{
         border:none;
+        display: block;
+        background-color: white;
     }
-
+    #grid-pagina{
+        display: block;
+    }
     section, div{
         border:none;
     }
@@ -277,6 +295,7 @@ main{
         page-break-after: always;
         padding-top: 20px;
         font-size: 2.5em;
+        background-color: white;
     }
     nav{
         display: none;
@@ -288,6 +307,12 @@ main{
     footer{
         page-break-before: always;
     }
+    .c1{
+        background-color: white;
+    }
+    .c2{
+        background-color: white;
+    }
     .watermark {
         display: block;
         position: fixed;
@@ -296,7 +321,23 @@ main{
         color: rgba(0, 0, 0);
         right: 5px;
     }
+    #galerie-statica{
+        display: none;
+    }
+    #video{
+        display: none;
+    }
+    #tab-orar {
+        border-color: white;
+    }
+    #tab-orar td{
+        background-color: white;
 
+    }
+    #tab-orar th{
+        background-color: white;
+
+    }
     .watermark::after {
 
         opacity: 0.65;
@@ -306,8 +347,8 @@ main{
         line-height: 1cm;
         display: block;
         background: white;
-        outline: 4px solid black;
-        border:2px solid black;
+        border:5px solid black;
+        border-style: double;
         content: "Cîrstea Ruxandra";
     }
 

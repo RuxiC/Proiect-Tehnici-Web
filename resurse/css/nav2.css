@@ -24,10 +24,12 @@ nav {
 #acasa-meniu {
   display: block; /*rand urmatoru*/
 }
+
 #acasa-meniu #acasa {
   opacity: 0;
   transition: all 0.5s linear;
 }
+
 #acasa-meniu:hover #acasa {
   opacity: 1;
 }
@@ -40,11 +42,13 @@ ul.meniu {
   margin: 0;
   list-style-type: none;
 }
+
 ul.meniu > li {
   flex-grow: 0; /*de cate ori se mareste continutul sau se micsoreaza*/
   flex-shrink: 0;
   flex-basis: var(--latime-buton);
 }
+
 ul.meniu li {
   --grosime-border-meniu: 1px;
   width: var(--latime-buton);
@@ -55,14 +59,17 @@ ul.meniu li {
   border: var(--grosime-border-meniu) solid var(--culoare-border-buton);
   box-sizing: border-box;
 }
+
 ul.meniu li:hover {
   overflow: visible; /*apare meniul cand pui mouse-ul pe butonul acasa*/
   background-color: var(--culoare-margini);
 }
+
 ul.meniu li:hover ul {
   opacity: 1;
   transform: scale(1, 1);
 }
+
 ul.meniu li a, ul.meniu li div {
   line-height: calc(var(--inaltime-meniu) - 2 * var(--grosime-border-meniu));
   line-height: var(--inaltime-meniu);
@@ -73,11 +80,13 @@ ul.meniu li a, ul.meniu li div {
   text-decoration: none;
   font-weight: bold;
 }
+
 ul.meniu li a:hover, ul.meniu li div:hover {
   color: var(--culoare-buton-deschisa);
   transition: all 1s ease;
   text-transform: var(--culoare-buton-deschisa);
 }
+
 ul.meniu ul {
   padding: 0;
   margin: 0;
@@ -90,3 +99,4 @@ ul.meniu ul {
   transition: all 0.5s linear;
   list-style-type: none;
 }
+

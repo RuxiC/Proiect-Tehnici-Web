@@ -3,9 +3,8 @@ const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
 const sass = require("sass");
-/*const {Client} = require("pg");*/
+const {Client} = require("pg");
 
-/*
 var client= new Client({database:"tehnici_web",
         user:"ruxandra",
         password:"1234",
@@ -17,7 +16,7 @@ client.query("select * from lab8_10", function(err, rez){
     console.log("eroare:", err);
     console.log("rezultat:", rez);
 });
-*/
+
 
 // express ne-a ajutat sa cream un server
 app = express();  // etapa 4 - ex 2

@@ -28,27 +28,57 @@ ul.meniu{
     display: none;
 }
 
-#ch-menu:checked+ul.meniu{
+#ch-menu:checked + ul.meniu {
     display: block;
-    animation-name: animatie_meniu;
+    animation-name: fade-in-menu;
     animation-duration: 1s;
-    animation-timing-function: linear;
     animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    transform-origin: center top;
-}
-
-
-
-@keyframes animatie_meniu{
+  }
+  
+  @keyframes fade-in-menu {
     0% {
-        background: linear-gradient(135deg, #ff670f 0%, #ff670f 21%, #ffffff 56%, #0eea57 88%);
-      }
-      50% {
-        background: linear-gradient(135deg, #ff670f 0%, #ff670f 10%, #ffffff 40%, #0eea57 60%);
-      }
-      100% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  ul.meniu {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  #ch-menu:checked + ul.meniu {
+    opacity: 1;
+  }
 
-        background: linear-gradient(135deg, #ff670f 0%, #ff670f 5%, #ffffff 10%, #0eea57 40%);
-      }
+  /*
+  #ch-menu:checked + ul.meniu {
+  display: block;
+  animation-name: animatie_meniu;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  transform-origin: center top;
+  mask-image: linear-gradient(to bottom, transparent, black);
+  mask-size: 100% 100%;
+  mask-position: 0 -100%;
 }
+
+@keyframes animatie_meniu {
+  0% {
+    mask-position: 0 -100%;
+  }
+  100% {
+    mask-position: 0 0;
+  }
+}
+
+  */
+  
+  
+  

@@ -11,9 +11,9 @@
         <!--etapa 4 - ex5 -->
         <%- include("../fragmente/head.ejs") %> <!-- procent-minus reprezinta output-->
 
-
     </head>
     <body>
+        <div class="watermark"></div>
         <%- include("../fragmente/header.ejs") %>
     <main>
         <div id="grid-pagina">
@@ -38,7 +38,7 @@
             </figure> 
                     <!--10 h-->
                     <p><q><i>Nici cei mai opaci ochelari nu pot ascunde dragostea.</i></q> - Tiberiu Petre</p>
-                    <video controls="controls " preload = "metadata" poster = "/resurse/imagini/och4.png">
+                    <video id = "video" controls="controls " preload = "metadata" poster = "/resurse/imagini/och4.png">
                             <source src="/resurse/video/video2.mp4" type="video/mp4">
                             <source src="/resurse/video/video2.ogv" type="video/ogv">
                             <track default src="/resurse/video/subtitles ro.vtt" kind="captions" srclang="ro" label="romana"/>
