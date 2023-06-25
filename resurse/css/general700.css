@@ -24,3 +24,7 @@ body *{ /* atentie schimbati selectorul, are prioritate mica*/
     animation: none;
     transition: none;
 }
+
+.colum-count{
+    column-count: 1;
+}

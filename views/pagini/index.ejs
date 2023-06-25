@@ -12,19 +12,28 @@
         <%- include("../fragmente/head.ejs") %> <!-- procent-minus reprezinta output-->
 
     </head>
+    
     <body>
         <div class="watermark"></div>
         <%- include("../fragmente/header.ejs") %>
     <main>
+        <video playsinline autoplay muted loop poster="peisaj.jpg" id="bgvid">
+            <source src="/resurse/video/capadokia.mp4" type="video/mp4">
+        </video>
         <div id="grid-pagina">
             <section id="bine_ati_venit">
-                <h2>Bine ați venit! <i class='far fa-grin-beam fa-flip'></i></h2>
+                <div class="text-container">
+                <h2 class="text-plimbare">Bine ați venit! <i class='far fa-grin-beam fa-flip'></i></h2>
+            </div>
                 <p>
                     <!--in local avem toate datele care vrem sa le transmitem in ejs-->
                     <!--etapa 4 - ex 16-->
                     Ip: <%- locals.ip %>
                 </p>
                     <p class="intro">Vă mulțumim ca ne vizitați site-ul nostru care vă așteaptă cu produse de calitate, dar și reduceri și oferte încântătoare.</p>
+                    <p>La Iris Vision, găsești o gamă largă de ochelari de vedere și de soare, fiecare cu un design deosebit și o calitate 
+                        superioară. De la rame clasice și elegante până la modele moderne și îndrăznețe, avem tot ce ai nevoie pentru a-ți 
+                        exprima personalitatea și a te simți minunat în propria piele.</p>
                     <!--8-->
             <figure> 
                 <picture>
@@ -38,16 +47,12 @@
             </figure> 
                     <!--10 h-->
                     <p><q><i>Nici cei mai opaci ochelari nu pot ascunde dragostea.</i></q> - Tiberiu Petre</p>
-                    <video id = "video" controls="controls " preload = "metadata" poster = "/resurse/imagini/och4.png">
-                            <source src="/resurse/video/video2.mp4" type="video/mp4">
-                            <source src="/resurse/video/video2.ogv" type="video/ogv">
-                            <track default src="/resurse/video/subtitles ro.vtt" kind="captions" srclang="ro" label="romana"/>
-                            <track  src="/resurse/video/subtitles en.vtt" kind="captions" srclang="en" label="engleza"/>
-                    </video>
+                    
                   <!--  <button class="btn btn-primary">ceva</button> -->
             </section>
 
             <!-- 6 si 7-->
+            
             <section id="oferte">
                 <h2>Oferte</h2>
                         <article>
@@ -70,6 +75,7 @@
                         </article>
                         
             </section>
+            
             <section id="intrebari">
                 <h2><i class='fas fa-question-circle'></i> Întrebări frecvente</h2>
                 <!--12-->
@@ -169,10 +175,15 @@
                 <img src="/resurse/imagini/och2.jpg" alt="ochelari">
                 <figcaption>Ochelari de soare</figcaption>
             </figure>
-            <section id="anunturi">
-                <h2>Anunturi</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed suscipit mauris. Proin commodo, arcu in mollis ullamcorper, 
-                    tortor elit pulvinar dui, at vehicula mauris felis laoreet mauris. Nunc vulputate risus ex.</p>
+            <section id="noutati">
+                <h2>Noutăți</h2>
+                <p>Vrem să vă oferim cât mai multe modele de ochelari, astfel veți găsi aici videoclipuri cu noile modele apărute sau în trend cu moda.</p>
+                    <video id = "video" controls="controls " preload = "metadata" poster = "/resurse/imagini/och4.png">
+                        <source src="/resurse/video/video2.mp4" type="video/mp4">
+                        <source src="/resurse/video/video2.ogv" type="video/ogv">
+                        <track default src="/resurse/video/subtitles ro.vtt" kind="captions" srclang="ro" label="romana"/>
+                        <track  src="/resurse/video/subtitles en.vtt" kind="captions" srclang="en" label="engleza"/>
+                </video>
             </section>
             <section id="produse">
                 <h2>Produse</h2>
@@ -210,13 +221,18 @@
                 <div id ="gol"></div>
                
                 <% }  %>
-            </div>
+           
         </section>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed suscipit mauris. Proin commodo, arcu in mollis ullamcorper, 
-            tortor elit pulvinar dui, at vehicula mauris felis laoreet mauris. Nunc vulputate risus ex.</p>
-        
+        <section id="text1">
+            <p>Suntem extrem de entuziasmați să anunțăm o colaborare exclusivă între Iris Vision și superstarul fotbalului, Kylian Mbappé! Acum ai ocazia să te bucuri de ochelarii preferați ai unuia dintre cei mai talentați și influenți sportivi ai momentului.</p>  
+            <p>Imagină-ți să porți aceiași ochelari eleganți și moderni pe care îi poartă Mbappé în timpul meciurilor de fotbal sau în aparițiile sale publice de invidiat. Fii la fel de stilat și încrezător ca idolul tău, adăugând o notă de eleganță și rafinament în fiecare moment al zilei.</p>
+            <p>La Iris Vision, găsești o colecție impresionantă de ochelari de vedere și de soare, inspirată direct de stilul inconfundabil al lui Mbappé. Fie că îți dorești o pereche de ochelari de soare sport, perfectă pentru activitățile tale preferate în aer liber, sau o pereche de ochelari de vedere care să te reprezinte în întregime, avem tot ceea ce îți dorești.</p>
+            <p>În plus, achiziționarea ochelarilor preferați ai lui Mbappé este acum și mai ușoară. Vizitează site-ul nostru și explorează gama noastră variată de produse. Poți alege ochelarii preferați ai campionului și să îi adaugi în coșul de cumpărături în doar câteva clicuri. Livrarea rapidă și sigură este garantată, astfel încât să te bucuri cât mai curând de noua ta pereche de ochelari.</p>
+            <p>Nu rata oportunitatea de a te identifica cu stilul și pasiunea lui Mbappé. La Iris Vision, facem posibil ca acest vis să devină realitate. Alătură-te nouă și descoperă senzația de a purta ochelari de calitate, la fel ca superstarul tău preferat!</p>
+        </section>
+        <div id="imagine"></div>
     </main>
     <%- include("../fragmente/footer.ejs") %>
     </body>
+    </div>
 </html>

@@ -17,3 +17,8 @@ body{
                          "z-produse z-produse"
                          ;
 }
+
+.colum-count{
+    column-count: 1;
+}
+

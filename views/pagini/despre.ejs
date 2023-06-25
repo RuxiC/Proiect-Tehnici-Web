@@ -13,20 +13,21 @@
 
 
     </head>
-    <body>
+    <body class="background-scroll">
         <%- include("../fragmente/header.ejs") %>
     <main>
         <div>
             <div id="text">
                 <h1>Despre noi</h1>
             </div>
-            <div id="text-reflectat">Despre noi</div>
-        </div>
-        <hr>
+        <div id="text-reflectat">Despre noi</div>
+        
             <section>
                 <img src="/resurse/imagini/ochelari-de-soare-la-moda.jpg" alt = "despre noi" width="1000" heigh="400"/>
                 <p>Un grup de opticieni (dar nu numai) entuziaști, dedicați si doritori să împărtășească ce știu despre lentile, rame, ochelari.</p>
+                <hr>
                 <p><strong>Ce vrem?</strong></p>
+            <div class="colum-count">
                 <ul>
                     <li>Ne dorim să facem lucrurile mai simple și în acest domeniu, iar clienții noștri să știe ce lentile le trebuie și cum să le aleagă, în așa fel încât să se potrivescă cât mai bine cu nevoile și dorințele acestora.</li>
                     <li>Să oferim o experiență de navigare cât mai plăcută și distractivă în magazinul nostru online.</li>
@@ -35,8 +36,10 @@
                     <li>Să încercăm să informăm cât mai mult în legatură cu produsele pe care le vindem și cu noutățile în domeniu.</li>
                     <li>Să oferim produse de calitate, de la cei mai buni furnizori, la prețuri cât mai bune.</li>
                     <li>Să avem clienți multumiți și care revin cu plăcere la noi.</li>
-                </ul>   
+                </ul> 
+            </div>  
             </section>
+        </div>
     </main>
     <%- include("../fragmente/footer.ejs") %>
     </body>

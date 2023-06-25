@@ -54,14 +54,14 @@ h2{
 }
 /*4*/
 #grid-pagina > *{
-    border: 3px solid var(--culoare-margini);
+    border: 8px double var(--culoare-margini);
     padding:var(--padding-sectiune);
     border-radius: 4%;
     background-color: var(--mov-deschis);
 }
 
 #grid-pagina > section{
-    border: 3px var(--culoare-margini) solid;
+    border: 8px double(--culoare-margini);
     border-radius: 4%;
     background-color: var(--mov-deschis);
     padding:var(--padding-sectiune);
@@ -351,7 +351,13 @@ main{
         border-style: double;
         content: "Cîrstea Ruxandra";
     }
+    #imagine{
+        display: none;
+    }
 
+    #bgvid{
+        display: none;
+    }
 
 }
 
@@ -457,5 +463,130 @@ hr {
     background-clip: content-box;
   }
   
+
+/*etapa 5-duotone*/
+
+#imagine{
+	position:relative;
+	background-image:url("/resurse/imagini/mbappe.jpeg");
+	background-size:cover;
+	width:500px; 
+	height: 500px;
+	filter:brightness(100%) grayscale(0) ;
+	transition:all 2s linear;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    border: 3px solid var(--culoare-buton-deschisa);
+    overflow: hidden;
+}
+
+#imagine:after, #imagine:before{
+	content:" ";
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	transition:all 2s linear;
+}
+
+#imagine:after{
+	background-color: var(--culoare-tabel);
+	mix-blend-mode:lighten;
+}
+
+#imagine:before{
+	background-color:var(--culoare-buton-deschisa);
+	mix-blend-mode:darken;
+}
+
+#imagine:hover{
+    filter: grayscale(100%);
+}
+
+#imagine:hover::after,
+#imagine:hover::before {
+  background-color: transparent;
+}
+
+/* etapa 5-scriere text pe coloane*/
+.colum-count {
+    column-count: 2;
+    column-gap: 20px; 
+    column-rule-style: dashed;
+}
+.colum-count p {
+    margin-top: 0; 
+}
+
+/*etapa 5- Schimbarea afișării implicite a textului selectat*/
+
+p::selection {
+    color: var(--culoare-buton-deschisa);
+    background-color: var(--culoare-albastru-deschis);
+}
+
+/*etapa 5 - text in miscare */
+@keyframes plimbare-orizontala {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
   
+  .text-plimbare {
+    white-space: nowrap; /* Asigură afișarea textului pe o singură linie */
+    overflow: hidden; /* Ascunde textul care depășește lățimea elementului */
+    animation: plimbare-orizontala 7s linear infinite; /* Aplică animația pe 10 secunde, cu o mișcare liniară, repetată infinit */
+}
+
+.text-container {
+    overflow-x: hidden; /* Ascunde orice conținut care depășește lățimea containerului */
+  }
+
+/*etapa 5 - background fix la scroll */
+
+.background-scroll {
+    background-image: url("/resurse/imagini/ochelari8.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: schimbare-imagini 10s infinite;
+  }
+  
+  @keyframes schimbare-imagini {
+    0% {
+      background-image: url("/resurse/imagini/ochelari8.png");
+    }
+    50% {
+      background-image: url("/resurse/imagini/ochelari7.jpeg");
+    }
+    100% {
+      background-image: url("/resurse/imagini/ochelari6.jpg");
+    }
+  }
+  
+  /*etapa 5 - background videoclip*/
+  #bgvid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+
+  #text1{
+    background-color: var(--mov-deschis);
+    padding: var(--padding-sectiune);
+    border-radius: 8%;
+    border: 8px double var(--culoare-margini);
+  }
+
+
   
